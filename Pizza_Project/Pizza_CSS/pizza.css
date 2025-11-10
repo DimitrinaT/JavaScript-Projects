@@ -1,0 +1,138 @@
+/* Body background */
+body {
+   /* background-color: #d62828; */
+    background: url("../images/pizza.jpg") no-repeat center center;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+/* Container for the menu */
+#menuBG {
+    width: 600px;
+    max-width: 95%;
+    margin: 20px auto;
+    padding-bottom: 50px;
+    background-color: rgba(0, 0, 0, 0.5); 
+    border-radius: 10px;
+    padding: 20px; 
+}
+
+/* Heading */
+h1 {
+    font-family: 'Arial Black', sans-serif;
+    color: #fff9e6;
+    text-align: center;
+    margin: 10px 0 20px 0;
+}
+
+/* Menu form with three columns */
+#frmMenu {
+    display: flex;
+    justify-content: space-between; 
+    flex-wrap: wrap; 
+    margin-bottom: 50px; 
+}
+
+/* Columns: Size, Vegetables, Meats */
+.left, .middle, .right {
+    width: 30%; 
+    box-sizing: border-box;
+   padding: 0 18px;
+}
+
+
+/* Subheadings for menu sections */
+h3 {
+    font-family: 'Verdana', sans-serif;
+    color: #ffdd57;
+    margin-bottom: 10px;
+}
+
+/* Text inside divs */
+div {
+    font-family: 'Trebuchet MS', sans-serif;
+    color: #fff3e6;
+}
+
+/* Place Order button centered */
+#btnOrder {
+    display: block;
+    margin: 10px auto;
+    width: 120px;
+    height: 40px;
+    background-color: #ffdd57;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+#btnOrder:hover {
+    background-color: #ffc107; 
+}
+
+/* Cart container holding order and total boxes */
+#cart {
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+    gap: 30px;               
+    margin-top: 50px;       
+}
+
+/* Order summary and total boxes */
+#showText,
+#totalPrice {
+    width: 200px;
+    background-color: rgba(255, 255, 230, 0.2);
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    color: #fff9e6
+}
+
+/* Total box heading highlight */
+#totalPrice {
+    color: #ffdd57;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    #frmMenu {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .left, .middle, .right {
+        width: 100%;
+        border: none; 
+        padding: 0;
+    }
+
+    #cart {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    #showText, #totalPrice {
+        width: 90%;
+        max-width: 300px;
+    }
+}
+
+/* Radio buttons and checkboxes styling */
+input[type="radio"],
+input[type="checkbox"] {
+    accent-color: rgb(65, 57, 57);      
+    cursor: pointer;           
+}
+
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+    outline: 2px solid black;  
+    outline-offset: 2px;
+}
