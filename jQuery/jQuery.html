@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<script>
+$(document).ready(function() {
+    $("html").append(
+        "<body>\
+            <div id='container'>\
+                <div id='inner'>\
+                    <h1>Basic jQuery</h1>\
+                    <p id='1'>Paragraph 1</p>\
+                    <p id='2'>Paragraph 2</p>\
+                    <p id='3'>Paragraph 3</p>\
+                    <p id='4'>Click to fade out</p>\
+                </div>\
+            </div>\           </body>"
+    );
+    //Change text color of p2
+    $("#2").css({"color":"red"});
+    //Hide the <h1> when p3 is clicked
+    $("#3").click(function() {
+        $("h1").hide();
+    });
+    //Background colour change and click event for p1
+    $("#1").on ({
+        mouseenter: function(){
+            $(this).css("background-color", "yellow");
+        },
+        mouseleave: function() {
+            $(this).css("background-color", "gray");
+        },
+        click: function() {
+            console.log("clicked");
+        }
+    });
+    //Fade out p4, then fade it back in 
+    $("#4").click(function(){
+        $(this).fadeOut(600).delay(600).fadeIn(600);
+    });
+});
+</script>
+</html>
